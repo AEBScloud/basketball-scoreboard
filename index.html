@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
+    </head>
+    <body>
+        <div id="overlay"></div>
+        <div class="board">
+            <div class="score-container">
+                <div class="container-home">
+                    <h3>HOME</h3>
+                    <div class="screen-home">
+                        <p class="score" id="home-points"></p>
+                    </div>
+                    <div class="points-container">
+                        <button class="points-btn" id="one-points-home" onclick="increment1Home()">+1</button>
+                        <button class="points-btn" id="two-points-home" onclick="increment2Home()">+2</button>
+                        <button class="points-btn" id="three-points-home" onclick="increment3Home()">+3</button>
+                    </div>
+                    <h2 id="fouls-title">FOULS</h2>
+                    <div class="fouls-home">
+                        <p class="fouls" id="home-fouls"></p>
+                    </div>
+                    <div class="fouls-container">
+                        <button class="fouls-btn" id="plus-one-home" onclick="incrementFoulsHome()">+1</button>
+                        <button class="fouls-btn" id="min-one-home" onclick="decrementFoulsHome()">-1</button>
+                    </div>
+                </div>
+                <div id="timer">
+                    <h2>timer</h2>
+                    <p id="timer-display">00:00</p>
+                    <div id="periods">
+                        <h2>period</h2>
+                        <!-- <label><input type="radio" name="payment" checked>1</label> -->
+                        <label><input type="radio" name="period" >1</label>
+                        <label><input type="radio" name="period" >2</label>
+                        <label><input type="radio" name="period" >3</label>
+                        <label><input type="radio" name="period" >4</label>
+                    </div>
+                    <div id="new-game-container">
+                        <button id="new-game-btn" onclick="startGame()">START GAME</button>
+                    </div>
+                </div>
+                <div class="container-guest">
+                    <h3>GUEST</h3>
+                    <div class="screen-guest">
+                        <p class="score" id="guest-points"></p>
+                    </div>
+                    <div class="points-container">
+                        <button class="points-btn" id="one-points-guest" onclick="increment1Guest()">+1</button>
+                        <button class="points-btn" id="two-points-guest" onclick="increment2Guest()">+2</button>
+                        <button class="points-btn" id="three-points-guest" onclick="increment3Guest()">+3</button>
+                    </div>
+                    <h2 id="fouls-title">FOULS</h2>
+                    <div class="fouls-guest">
+                        <p class="fouls" id="guest-fouls"></p>
+                    </div>
+                    <div class="fouls-container">
+                        <button class="fouls-btn" id="plus-one-guest" onclick="incrementFoulsGuest()">+1</button>
+                        <button class="fouls-btn" id="min-one-guest" onclick="decrementFoulsGuest()">-1</button>
+                    </div>
+                </div>
+            </div>
+            <div id="reset-game-container">
+                <button id="reset-game-btn" onclick="resetGame()">Reset</button>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
