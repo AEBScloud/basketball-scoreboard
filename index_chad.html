@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Scoreboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index_chad.css" />
+</head>
+<body>
+
+    <!-- Start Overlay -->
+    <div id="overlay">
+        <h1>🏀 Scoreboard</h1>
+        <button id="start-btn">Start Game</button>
+    </div>
+
+    <!-- Main Scoreboard -->
+    <h1>Scoreboard</h1>
+
+    <div class="container">
+
+        <!-- Home Team -->
+        <div class="scoreboard">
+            <div class="score-label">Home</div>
+            <div class="score text-default" id="home-points">0</div>
+
+            <div class="button-group">
+                <button class="points-btn" data-team="home" data-points="1">+1</button>
+                <button class="points-btn" data-team="home" data-points="2">+2</button>
+                <button class="points-btn" data-team="home" data-points="3">+3</button>
+            </div>
+
+            <div class="score-label">Fouls</div>
+            <div class="text-default" id="home-fouls">0</div>
+
+            <div class="button-group">
+                <button class="fouls-btn" data-team="home" data-foul="1">+1</button>
+                <button class="fouls-btn" data-team="home" data-foul="-1">-1</button>
+            </div>
+        </div>
+
+        <!-- Guest Team -->
+        <div class="scoreboard">
+            <div class="score-label">Guest</div>
+            <div class="score text-default" id="guest-points">0</div>
+
+            <div class="button-group">
+                <button class="points-btn" data-team="guest" data-points="1">+1</button>
+                <button class="points-btn" data-team="guest" data-points="2">+2</button>
+                <button class="points-btn" data-team="guest" data-points="3">+3</button>
+            </div>
+
+            <div class="score-label">Fouls</div>
+            <div class="text-default" id="guest-fouls">0</div>
+
+            <div class="button-group">
+                <button class="fouls-btn" data-team="guest" data-foul="1">+1</button>
+                <button class="fouls-btn" data-team="guest" data-foul="-1">-1</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timer and Period Controls -->
+    <div id="timer-display">12:00</div>
+
+    <div class="period-controls">
+        <label for="period">Period:</label>
+        <select id="period">
+            <option value="1">1st</option>
+            <option value="2">2nd</option>
+            <option value="3">3rd</option>
+            <option value="4">4th</option>
+        </select>
+
+        <button id="start-timer-btn">Start</button>
+        <button id="stop-timer-btn" disabled>Stop</button>
+        <button id="reset-timer-btn">Reset</button>
+    </div>
+
+    <!-- Reset Game Button -->
+    <button id="reset-game-btn">Reset Game</button>
+
+    <script type="text/javascript" src="index_chad.js"></script>
+</body>
+</html>
